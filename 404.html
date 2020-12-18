@@ -31,13 +31,11 @@
         var issueNumber = location.pathname.split("/")[
           PATH_SEGMENTS_TO_SKIP + 1
         ];
-		alert(issueNumber);
-		if (isNumber(issueNumber)) {
+		if (!isNumber(issueNumber)) {
 			PATH_SEGMENTS_TO_SKIP = 0;
 			issueNumber = location.pathname.split("/")[
 				PATH_SEGMENTS_TO_SKIP + 1
 			];
-			alert(issueNumber);
 		}
         var homepage =
           location.protocol +
